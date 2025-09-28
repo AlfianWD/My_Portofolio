@@ -7,23 +7,41 @@
     <!-- CDN Tailwind -->
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
 
+    <!-- Import Google Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+
+
     <title>My Portofolio</title>
+
+    <!-- Tailwind CSS -->
+    <style>
+        :root {
+            --font-inter: "Poppins", sans-serif;
+            font-weight: 500;
+            font-style: normal;
+        }
+    </style>
+
 </head>
 <body class="bg-[#1A1A1D]">
     <!-- Header Section -->
-        <header class="p-6">
+        <header class="p-6 sticky top-0 z-50">
             <!-- Navigation Section -->
-                <nav class="flex">
+                <nav class="flex justify-center">
 
                     <!-- Logo Section-->
-                    <a href="#" class="ltr pe-8 flex">LOGO</a>
+                    <a href="#" class="flex ltr pe-100 w-xl">
+                        <img src="src/assets/img/Logo_AlfianW.png" alt="Logo">
+                    </a>
 
                     <!-- Menu Section-->
-                    <ul class="flex items-end gap-8">
-                        <il><a href="#">Home</a></il>
-                        <il><a href="#">About</a></il>
-                        <il><a href="#">Porject</a></il>
-                        <il><a href="#">Contact</a></il>
+                    <ul class="flex space-x-8 gap-8 items-center font-(family-name:--font-inter)">
+                        <il class="text-white"><a href="#">Home</a></il>
+                        <il class="text-white"><a href="#">About</a></il>
+                        <il class="text-white"><a href="#">Project</a></il>
+                        <il class="text-white"><a href="#">Contact</a></il>
                     </ul> 
                 </nav>
         </header>

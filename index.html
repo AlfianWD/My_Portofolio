@@ -51,8 +51,8 @@
                     <!-- Menu Section-->
                     <ul class="flex space-x-8 gap-8 items-center font-secondary">
                         <il class="text-white"><a href="#">Home</a></il>
-                        <il class="text-white"><a href="#">About</a></il>
-                        <il class="text-white"><a href="#">Project</a></il>
+                        <il class="text-white"><a href="#About">About</a></il>
+                        <il class="text-white"><a href="#Project">Project</a></il>
                         <il class="text-white"><a href="#">Contact</a></il>
                     </ul> 
                 </nav>
@@ -75,7 +75,7 @@
         </section>
 
     <!-- Service Section -->
-        <section id="services" class="grid grid-cols-3 gap-8 mt-20 mb-20 justify-items-center items-start font-secondary">
+        <section id="services" class="grid grid-cols-3 mt-20 mb-20 justify-items-center items-start font-secondary">
             <!-- Card 1 -->
             <div class="services-card bg-[#35363B] p-10 pr-15 rounded-md">
                 <img src="src/assets/img/Img_Service-1.png" alt="My_Services-01" class="items-start">
@@ -130,14 +130,14 @@
         <section class="skills justify-items-center px-16 py-15">
 
             <div class="bg-[#35363B] border-2 border-white rounded-xl">
-                <!-- Tittle Section -->
+                <!-- Title Section -->
                     <div class="py-6 px-6">
                         <h2 class="text-[30px] text-[#FCE05A] font-first">My Skills</h2>
                         <p class="text-white text-[22px] font-secondary">Technologies I've Been Working With Recently</p>
                     </div>
             
                 <!-- List Skills -->
-                    <div class="skils-img grid grid-cols-7 gap-10 py-4 px-6">
+                    <div class="skils-img grid grid-cols-7 gap-10 py-4 px-4">
                         <img src="src/assets/img/Img-Html.png" alt="Img-Html">
                         <img src="src/assets/img/Img-CSS.png" alt="Img-CSS">
                         <img src="src/assets/img/Img-JS.png" alt="Img-JS">
@@ -150,30 +150,109 @@
         </section>
     
     <!-- Porject Section -->
-        <section class="project">
+        <section class="project px-10 py-10">
 
-            <!-- Tittle Section -->
-            <h2>My Project</h2>
-            <p>Some Things I've Build So Far</p>
-            <button>View All</button>
+            <!-- Title Section -->
+            <div id="Project" class="flex items-center justify-between pl-25 pr-25 px-10 py-10">
+
+                <!-- Left: Title & Subtitle -->
+                <div>
+                     <h2 class="font-first text-[#FCE05A] text-[30px]">My Project</h2>
+                    <p class="font-secondary text-white">Some Things I've Build So Far</p>
+                </div>
+               
+                <!-- Right: Button View -->
+                <div>
+                    <a href="#" class="rounded-none bg-[#FCE05A] px-4 py-2">View All</a>    
+                </div>
+            </div>
+            
 
             <!-- List Project -->
-            <div class="project-list">
-                <div class="project-1">
-                    <title>Comming Soon</title>
-                    <button>Show More</button>
+            <div class="project-list grid grid-cols-2 gap-6 px-10 py-10 items-center justify-items-center">
+                
+                <!-- Card-Project-1 -->
+                <div class="project-1 w-[350px] text-center">
+
+                    <!-- Img-Project -->
+                    <div class="bg-[#D9D9D9] w-full h-[220px] flex items-center justify-center text-black font-first rounded-md">
+                        Comming Soon
+                    </div>
+
+                    <!-- Title-Project -->
+                    <div class="bg-[#D9D9D9] w-[150px] text-black font-first text-sm mt-2 py-1">
+                        Comming Soon
+                    </div>
+                    
+                    <!-- Button-View-Project -->
+                    <div class="mt-2">
+                        <a href="#" class="text-[#FCE05A] text-sm font-secondary flex items-center gap-1">
+                            Show More >
+                        </a>
+                    </div>
                 </div>
-                <div class="project-2">
-                    <title>Comming Soon</title>
-                    <button>Show More</button>
+
+                <!-- Card-Project-2 -->
+               <div class="project-2 w-[350px] text-center">
+
+                    <!-- Img-Project -->
+                    <div class="bg-[#D9D9D9] w-full h-[220px] flex items-center justify-center text-black font-first rounded-md">
+                        Comming Soon
+                    </div>
+
+                    <!-- Title-Project -->
+                    <div class="bg-[#D9D9D9] w-[150px] text-black font-first text-sm mt-2 py-1">
+                        Comming Soon
+                    </div>
+                    
+                    <!-- Button-View-Project -->
+                    <div class="mt-2">
+                        <a href="#" class="text-[#FCE05A] text-sm font-secondary flex items-center gap-1">
+                            Show More >
+                        </a>
+                    </div>
                 </div>
-                <div class="project-3">
-                    <title>Comming Soon</title>
-                    <button>Show More</button>
+
+                <!-- Card-Project-3 -->
+                <div class="project-3 w-[350px] text-center">
+
+                    <!-- Img-Project -->
+                    <div class="bg-[#D9D9D9] w-full h-[220px] flex items-center justify-center text-black font-first rounded-md">
+                        Comming Soon
+                    </div>
+
+                    <!-- Title-Project -->
+                    <div class="bg-[#D9D9D9] w-[150px] text-black font-first text-sm mt-2 py-1">
+                        Comming Soon
+                    </div>
+                    
+                    <!-- Button-View-Project -->
+                    <div class="mt-2">
+                        <a href="#" class="text-[#FCE05A] text-sm font-secondary flex items-center gap-1">
+                            Show More >
+                        </a>
+                    </div>
                 </div>
-                <div class="project-4">
-                    <title>Comming Soon</title>
-                    <button>Show More</button>
+
+                <!-- Card-Project-4 -->
+                <div class="project-4 w-[350px] text-center">
+
+                    <!-- Img-Project -->
+                    <div class="bg-[#D9D9D9] w-full h-[220px] flex items-center justify-center text-black font-first rounded-md">
+                        Comming Soon
+                    </div>
+
+                    <!-- Title-Project -->
+                    <div class="bg-[#D9D9D9] w-[150px] text-black font-first text-sm mt-2 py-1">
+                        Comming Soon
+                    </div>
+                    
+                    <!-- Button-View-Project -->
+                    <div class="mt-2">
+                        <a href="#" class="text-[#FCE05A] text-sm font-secondary flex items-center gap-1">
+                            Show More >
+                        </a>
+                    </div>
                 </div>
             </div>
         </section>

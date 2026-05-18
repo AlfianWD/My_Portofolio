@@ -1,367 +1,73 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
     <!-- CDN Tailwind -->
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
 
-    <!-- Import Google Font -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <!-- CDN Vue-->
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
 
+    <!-- Module JS-->
+    <script type="module" src="./app.js"></script>
+
+    <!-- Import Google Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      rel="stylesheet"
+    />
 
     <title>My Portofolio</title>
 
     <!-- Tailwind CSS -->
     <style>
-        :root {
-            --font-inter: "Poppins", sans-serif;
-        }
+      :root {
+        --font-inter: "Poppins", sans-serif;
+      }
 
-        .font-first {
-            font-family: var(--font-inter);
-            font-weight: 500;
-            font-style: normal;
-        }
+      .font-first {
+        font-family: var(--font-inter);
+        font-weight: 500;
+        font-style: normal;
+      }
 
-        .font-secondary {
-            font-family: var(--font-inter);
-            font-weight: 300;
-            font-style: light ;
-        }
-
-
+      .font-secondary {
+        font-family: var(--font-inter);
+        font-weight: 300;
+        font-style: light;
+      }
     </style>
+  </head>
+  <body class="bg-[#1A1A1D]">
+    <div id="app">
+      <!-- Header Section -->
+      <!-- Navigation Section -->
+      <navbar-component></navbar-component>
 
-</head>
-<body class="bg-[#1A1A1D]">
-    <!-- Header Section -->
-        <header class="p-6 sticky">
-            <!-- Navigation Section -->
-                <nav class="flex justify-center">
+      <!-- Hero Section -->
+      <hero-section></hero-section>
 
-                    <!-- Logo Section-->
-                    <a href="#" class="flex ltr pe-100 w-xl">
-                        <img src="src/assets/img/Logo_AlfianW.png" alt="Logo">
-                    </a>
+      <!-- Service Section -->
+      <service-section></service-section>
 
-                    <!-- Menu Section-->
-                    <ul class="flex space-x-8 gap-8 items-center font-secondary">
-                        <il class="text-white"><a href="#">Home</a></il>
-                        <il class="text-white"><a href="#About">About</a></il>
-                        <il class="text-white"><a href="#Project">Project</a></il>
-                        <il class="text-white"><a href="#">Contact</a></il>
-                    </ul> 
-                </nav>
-        </header>
+      <!-- About Section -->
+      <about-section></about-section>
 
-    <!-- Hero Section -->
-        <section class="hero mt-8 grid grid-cols-2 gap-8 px-16 items-center justify-items-center">
+      <!-- Skill Section -->
+      <skills-section></skills-section>
 
-            <!-- Hero Left Section -->
-                <div class="hero-left justify-items-center">
-                    <img src="src/assets/img/My_IMG-01.png" alt="My_IMG-01">
-                </div>
+      <!-- Porject Section -->
+      <project-section></project-section>
 
-            <!-- Hero Right Section -->
-                <div class="hero-right content-center font-first ltr">
-                    <p class="text-[#FCE05A] text-[24px] my-8">INTRODUCTION</p>
-                    <h1 class="text-white text-[40px] mb-8">WEB DEVELOPER</h1>
-                    <a href="#contact" class="rounded-none bg-[#FCE05A] p-2">Contact Me</a>
-                </div>
-        </section>
+      <!-- Contact Section -->
+      <contact-section></contact-section>
 
-    <!-- Service Section -->
-        <section id="services" class="grid grid-cols-3 mt-20 mb-20 justify-items-center items-start font-secondary">
-            <!-- Card 1 -->
-            <div class="services-card bg-[#35363B] p-10 pr-15 rounded-md">
-                <img src="src/assets/img/Img_Service-1.png" alt="My_Services-01" class="items-start">
-                <h2 class="text-white mb-8 mt-8">UI/UX Designing</h2>
-                <a href="#UI-UX-Designing" class="rounded-none bg-[#FCE05A] p-2">Know More ></a>
-            </div>
-
-            <!-- Card 2 -->
-            <div class="services-card bg-[#35363B] p-10 pr-15 rounded-md">
-                <img src="src/assets/img/Img_Service-2.png" alt="My_Services-02" class="items-start">
-                <h2 class="text-white mb-8 mt-8">Graphic Designing</h2>
-                <a href="#Graphic-Designing" class="rounded-none bg-[#FCE05A] p-2">Know More ></a>
-            </div>
-
-            <!-- Card 3 -->
-            <div class="services-card bg-[#35363B] p-10 pr-15 rounded-md">
-                <img src="src/assets/img/Img_Service-3.png" alt="My_Services-03" class="items-start">
-                <h2 class="text-white mb-8 mt-8">Web Development</h2>
-                <a href="#Web-Development" class="rounded-none bg-[#FCE05A] p-2">Know More ></a>
-            </div>
-        </section>
-
-    <!-- About Section -->
-        <section class="About">
-
-            <!-- About Title -->
-            <div id="About" class="items-center justify-items-center font-first">
-                <h1 class="text-[#FCE05A] text-[32px]">About Me</h1>
-                <div class="w-24 h-[4px] bg-white pb-1"></div>
-            </div>
-
-            <!-- About Description -->
-            <div class="about-description grid grid-cols-2 gap-8 px-16 py-15 items-center justify-items-center">
-
-                <!-- About-Text -->
-                <div class="About-text p-8">
-                    <h2 class="text-white text-[24px] font-first">Hi I'am <strong class="text-[#FCE05A]">Alfian Wahyu</strong></h2>
-                    <p class="text-white py-5 text-[18px] font-secondary">I am professional Web Development, Having 3+ Years of Experience,
-                        Living in Indonesia. Having more professional skills like
-                        Graphic Designing, and UI/UX Designing.
-                    </p>
-                </div>
-
-                <!-- About Img -->
-                <div class="about-img">
-                    <img src="src/assets/img/My_IMG-02.png" alt="My_IMG-02">
-                </div>
-            </div>
-        </section>
-        
-    <!-- Skill Section -->
-        <section class="skills justify-items-center px-16 py-15">
-
-            <div class="bg-[#35363B] border-2 border-white rounded-xl">
-                <!-- Title Section -->
-                    <div class="py-6 px-6">
-                        <h2 class="text-[30px] text-[#FCE05A] font-first">My Skills</h2>
-                        <p class="text-white text-[22px] font-secondary">Technologies I've Been Working With Recently</p>
-                    </div>
-            
-                <!-- List Skills -->
-                    <div class="skils-img grid grid-cols-7 gap-10 py-4 px-4">
-                        <img src="src/assets/img/Img-Html.png" alt="Img-Html">
-                        <img src="src/assets/img/Img-CSS.png" alt="Img-CSS">
-                        <img src="src/assets/img/Img-JS.png" alt="Img-JS">
-                        <img src="src/assets/img/Img-React.png" alt="Img-React">
-                        <img src="src/assets/img/Img-PHP.png" alt="Img-PHP">
-                        <img src="src/assets/img/Img-Laravel.png" alt="Img-Laravel">
-                        <img src="src/assets/img/Img-MySQL.png" alt="Img-MySQL">
-                    </div>
-            </div>
-        </section>
-    
-    <!-- Porject Section -->
-        <section class="project px-10 py-10">
-
-            <!-- Title Section -->
-            <div id="Project" class="flex items-center justify-between pl-25 pr-25 px-10 py-10">
-
-                <!-- Left: Title & Subtitle -->
-                <div>
-                     <h2 class="font-first text-[#FCE05A] text-[30px]">My Project</h2>
-                    <p class="font-secondary text-white">Some Things I've Build So Far</p>
-                </div>
-               
-                <!-- Right: Button View -->
-                <div>
-                    <a href="#" class="rounded-none bg-[#FCE05A] px-4 py-2">View All</a>    
-                </div>
-            </div>
-            
-
-            <!-- List Project -->
-            <div class="project-list grid grid-cols-2 gap-6 px-10 py-10 items-center justify-items-center">
-                
-                <!-- Card-Project-1 -->
-                <div class="project-1 w-[350px] text-center">
-
-                    <!-- Img-Project -->
-                    <div class="bg-[#D9D9D9] w-full h-[220px] flex items-center justify-center text-black font-first rounded-md">
-                        Comming Soon
-                    </div>
-
-                    <!-- Title-Project -->
-                    <div class="bg-[#D9D9D9] w-[150px] text-black font-first text-sm mt-2 py-1">
-                        Comming Soon
-                    </div>
-                    
-                    <!-- Button-View-Project -->
-                    <div class="mt-2">
-                        <a href="#" class="text-[#FCE05A] text-sm font-secondary flex items-center gap-1">
-                            Show More >
-                        </a>
-                    </div>
-                </div>
-
-                <!-- Card-Project-2 -->
-               <div class="project-2 w-[350px] text-center">
-
-                    <!-- Img-Project -->
-                    <div class="bg-[#D9D9D9] w-full h-[220px] flex items-center justify-center text-black font-first rounded-md">
-                        Comming Soon
-                    </div>
-
-                    <!-- Title-Project -->
-                    <div class="bg-[#D9D9D9] w-[150px] text-black font-first text-sm mt-2 py-1">
-                        Comming Soon
-                    </div>
-                    
-                    <!-- Button-View-Project -->
-                    <div class="mt-2">
-                        <a href="#" class="text-[#FCE05A] text-sm font-secondary flex items-center gap-1">
-                            Show More >
-                        </a>
-                    </div>
-                </div>
-
-                <!-- Card-Project-3 -->
-                <div class="project-3 w-[350px] text-center">
-
-                    <!-- Img-Project -->
-                    <div class="bg-[#D9D9D9] w-full h-[220px] flex items-center justify-center text-black font-first rounded-md">
-                        Comming Soon
-                    </div>
-
-                    <!-- Title-Project -->
-                    <div class="bg-[#D9D9D9] w-[150px] text-black font-first text-sm mt-2 py-1">
-                        Comming Soon
-                    </div>
-                    
-                    <!-- Button-View-Project -->
-                    <div class="mt-2">
-                        <a href="#" class="text-[#FCE05A] text-sm font-secondary flex items-center gap-1">
-                            Show More >
-                        </a>
-                    </div>
-                </div>
-
-                <!-- Card-Project-4 -->
-                <div class="project-4 w-[350px] text-center">
-
-                    <!-- Img-Project -->
-                    <div class="bg-[#D9D9D9] w-full h-[220px] flex items-center justify-center text-black font-first rounded-md">
-                        Comming Soon
-                    </div>
-
-                    <!-- Title-Project -->
-                    <div class="bg-[#D9D9D9] w-[150px] text-black font-first text-sm mt-2 py-1">
-                        Comming Soon
-                    </div>
-                    
-                    <!-- Button-View-Project -->
-                    <div class="mt-2">
-                        <a href="#" class="text-[#FCE05A] text-sm font-secondary flex items-center gap-1">
-                            Show More >
-                        </a>
-                    </div>
-                </div>
-            </div>
-        </section>
-    
-    <!-- Contact Section -->
-        <section class="contact bg-white">
-
-            <!-- Contact-Tittle Section -->
-                <div id="Contact" class="items-center justify-items-center px-16 py-16">
-                    <h1 class="font-first text-black text-[30px]">Contact Us</h1>
-                    <div class="w-24 h-[4px] bg-[#FCE05A] pb-1"></div>
-                </div>
-
-            <!-- Contact-Info Section -->
-                <div class="grid grid-cols-2 gap-8 items-start justify-items-center pt-16 pb-16">
-
-                    <!-- Description-Contact-Info Section -->
-                    <div class="contact-info">
-
-                        <div class="pb-16">
-                            <h2 class="font-first text-[22px]">
-                                <strong>
-                                    Drop Me a Message
-                                </strong>
-                            </h2>
-                            <p class="font-secondary font-[18px]">Let's Build Something Amazing Together!</p>
-                        </div>
-                    
-                    <!-- Contact-Info-Phone -->
-                        <div class="Conntact-Info-Phone flex items-center gap-4 mb-8">
-                            <img src="src/assets/img/Img-Phone.png" alt="Img-Phone">
-                            <p class="font-secondary">+62 895805124845</p>
-                        </div>
-                    
-                    <!-- Contact-Info-Email -->
-                        <div class="Contact-Info-Email flex items-center gap-3 mb-8">
-                            <img src="src/assets/img/Img-Mail.png" alt="Img-Mail">
-                            <p class="font-secondary">alfianw230@gmail.com</p>
-                        </div>
-                    </div>
-
-                    <!-- Contact-Form Section -->
-                    <div class="border-black border-2 bg-[#FCE05A] rounded-md p-8 w-full max-w-md">
-                        <form class="space-y-4" action="">
-                            
-                            <!-- Name Area -->
-                            <div>
-                                <input class="w-full p-2 bg-white text-black border border-black rounded-sm" type="text" placeholder="Name">
-                            </div>
-
-                            <!-- Email Area -->
-                            <div>
-                                <input class="w-full p-2 bg-white text-black border border-black rounded-sm" type="email" placeholder="Email">
-                            </div>
-
-                            <!-- Message Area -->
-                            <div>
-                                <textarea class="w-full h-25 p-2 bg-white text-black border border-black rounded-sm" name="" id="" placeholder="Message"></textarea>
-                            </div>
-
-                            <!-- Button Area -->
-                            <button class="bg-black text-white rounded-md px-6 py-2 font-secondary" type="submit">
-                                Submit
-                            </button>
-                        </form>
-                    </div>
-                </div>
-        </section>
-
-    <!-- Footer Section -->
-        <Footer class="py-4 px-30">
-
-            <div class="flex justify-between items-center">
-
-                <!-- Footer-Logo Section-->
-                    <a href="#" class="pe-16 w-50">
-                        <img src="src/assets/img/Logo_AlfianW.png" alt="Logo">
-                    </a>
-
-                <!-- Footer-Center-Containt -->
-                    <p class="font-secondary text-[#FCE05A]">
-                        @ 2025 Alfian Wahyu. All Rights Reserved
-                    </p>
-
-                <!-- Footer-Socials -->
-                    <div class="socials flex space-x-4">
-
-                        <!-- LinkedIn -->
-                        <div>
-                            <a href="#LinkdIn">
-                                <img src="src/assets/img/Img-Linkedin.png" alt="Img-Linkedin">
-                            </a>
-                        </div>
-                        
-                        <!-- Instagram -->
-                        <div>
-                            <a href="#Instagram">
-                                <img src="src/assets/img/Img-Instagram.png" alt="Img-Instagram">
-                            </a>
-                        </div>
-                    
-                        <!-- Github -->
-                        <div>
-                            <a href="#Github">
-                                <img src="src/assets/img/Img-GitHub.png" alt="Img-GitHub">
-                            </a>
-                        </div>
-                    </div>
-            </div>
-        </Footer>
-</body>
+      <!-- Footer Section -->
+      <footer-component></footer-component>
+    </div>
+  </body>
 </html>

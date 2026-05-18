@@ -1,5 +1,3 @@
-// import { createApp } from "https://unpkg.com/vue@3/dist/vue.esm-browser.js";
-// import { createApp } from "https://unpkg.com/vue@3/dist/vue.global.js";
 import Navbar from "./components/navbar.js";
 import Hero from "./components/hero.js";
 import Service from "./components/sercive.js";

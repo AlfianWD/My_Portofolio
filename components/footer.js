@@ -1,6 +1,6 @@
 export default {
   template: `
-        <Footer class="py-4 px-30">
+        <footer class="py-4 px-30">
             <div class="flex justify-between items-center">
 
                 <!-- Footer-Logo Section -->
@@ -38,6 +38,6 @@ export default {
                         </div>
                     </div>
             </div>
-        </Footer>
+        </footer>
     `,
 };

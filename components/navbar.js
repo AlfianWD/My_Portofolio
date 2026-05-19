@@ -9,10 +9,10 @@ export default {
 
                 <!-- Menu Section -->
                     <ul class="flex space-x-8 gap-8 items-center font-secondary">
-                        <il class="text-white"><a href="#">Home</a></il>
-                        <il class="text-white"><a href="#About">About</a></il>
-                        <il class="text-white"><a href="#Project">Project</a></il>
-                        <il class="text-white"><a href="#">Contact</a></il>
+                        <li class="text-white"><a href="#">Home</a></li>
+                        <li class="text-white"><a href="#About">About</a></li>
+                        <li class="text-white"><a href="#Project">Project</a></li>
+                        <li class="text-white"><a href="#">Contact</a></li>
                     </ul>         
             </nav> 
         </header>

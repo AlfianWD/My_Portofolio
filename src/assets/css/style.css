@@ -1,18 +1,16 @@
 /* Tailwind CSS  */
-    <style>
-      :root {
-        --font-inter: "Poppins", sans-serif;
-      }
+:root {
+  --font-inter: "Poppins", sans-serif;
+}
 
-      .font-first {
-        font-family: var(--font-inter);
-        font-weight: 500;
-        font-style: normal;
-      }
+.font-first {
+  font-family: var(--font-inter);
+  font-weight: 500;
+  font-style: normal;
+}
 
-      .font-secondary {
-        font-family: var(--font-inter);
-        font-weight: 300;
-        font-style: light;
-      }
-    </style>
+.font-secondary {
+  font-family: var(--font-inter);
+  font-weight: 300;
+  font-style: light;
+}
